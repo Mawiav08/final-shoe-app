@@ -19,7 +19,7 @@ const Cart = () => {
         ))}
       </ul>
       {/* Calculate total */}
-      <div>Total: ${cartItems.reduce((acc, item) => {
+      <div>Total: {cartItems.reduce((acc, item) => {
         const price = typeof item.price === 'number' ? item.price : 0;
         return acc + price;
       }, 0).toFixed(2)}</div>
